@@ -1,7 +1,6 @@
 import React, { Dispatch, useReducer } from 'react';
 import orderReducer, { TReducerAction, TOrderShape } from './order-reducer';
 
-
 type TContextShape = {
   state: TOrderShape;
   disp: Dispatch<TReducerAction>;
