@@ -21,7 +21,7 @@ export default function orderReducer(
     case 'MOD':
       return { ...state, ...payload };
     case 'INC':{
-      const newVal=state.price+payload.step;
+      const newVal=state.price+payload.step*2;
       return { ...state, price:newVal };
     }
       
