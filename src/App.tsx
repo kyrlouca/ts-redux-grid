@@ -1,26 +1,17 @@
 import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import StoreContext from './store/store-context';
+import Square from './components/Square';
+const XA = ({ val }: { val: string }) => <div>{val}</div>;
 
 const App: React.FC = () => {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <StoreContext>
+      <>
+        <XA val="makas tsaksa" />
+        <Square />
+      </>
+    </StoreContext>
   );
-}
+};
 
 export default App;
