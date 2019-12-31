@@ -24,7 +24,7 @@ const TopAreaDiv = styled.div`
 `;
 const CentralDiv = styled.div`
   grid-area: b;
-  z-index: 3;
+  z-index: 2;
 `;
 
 const BottomDiv = styled.div`
