@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
-// import MenuSection from './MenuSection';
-import Square from '../components/Square';
+import MenuPage from './menu-page';
+import Box from '../components/box';
 
 const OuterDiv = styled.div`
   /* border: black 3px solid; */
@@ -10,9 +10,7 @@ const OuterDiv = styled.div`
   display: flex;
   height: 100%;
 `;
-const LeftDiv = styled.div`
-  margin: 0;
-`;
+
 const RightDiv = styled.div`
   background: whitesmoke;
   flex: 1 1 auto;
@@ -20,12 +18,12 @@ const RightDiv = styled.div`
   padding: 0;
 `;
 
-export default function MainPage() {
+export default function CentralPage() {
   return (
     <OuterDiv>
-      <LeftDiv>Left Menu</LeftDiv>
+      <MenuPage />
       <RightDiv>
-        <Square />
+        <Box />
       </RightDiv>
     </OuterDiv>
   );

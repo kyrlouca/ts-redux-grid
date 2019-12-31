@@ -3,7 +3,7 @@ import React from 'react';
 import useStoreObject from '../store/store-object';
 import useStoreAction from '../store/store-action';
 
-export default function Square() {
+export default function Box() {
   const obj = useStoreObject();
   const dispatch = useStoreAction();
 

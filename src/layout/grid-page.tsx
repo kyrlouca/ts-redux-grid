@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import MainPage from './MainPage';
+import CentralPage from './central-page';
 
 // import TopPage from './TopPage';
 
@@ -36,7 +36,7 @@ export default function GridPage() {
     <MainGrid>
       <TopAreaDiv>top Div</TopAreaDiv>
       <CentralDiv>
-        <MainPage />
+        <CentralPage />        
       </CentralDiv>
       <BottomDiv>Bottom div</BottomDiv>
     </MainGrid>
