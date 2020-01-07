@@ -3,23 +3,20 @@ import { useSelector ,useDispatch} from 'react-redux';
 import {TStoreType} from '../store/redux-store'
 
 export default function Box() {
+  const selector=((state:TStoreType)=>state);
+
+  const obj = useSelector(selector);
   
-  const obj = useSelector<TStoreType,TStoreType>(state => state);
   const dispatch= useDispatch();
-    
-  
-  
+      
   const inc = () => {
-    dispatch({type:'INC'})    
-    // dispatch({ type: 'INC', payload: { id: '3', step: 1 } });
+    dispatch({type:'INC',load:{step:1}})    
   };
 
   return (
-    <div>
-      
+    <div>      
       <p>job: </p>
-      job2={obj.job}
-
+      counter={obj.counter}
       <button onClick={inc} >Inc</button>
     </div>
   );

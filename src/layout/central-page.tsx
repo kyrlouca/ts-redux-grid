@@ -2,6 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 import MenuPage from './menu-page';
 import Box from '../components/box';
+import Customers from '../components/customers';
 
 const OuterDiv = styled.div`
   /* border: black 3px solid; */
@@ -24,6 +25,7 @@ export default function CentralPage() {
       <MenuPage />
       <RightDiv>
         <Box />
+        <Customers />
       </RightDiv>
     </OuterDiv>
   );
