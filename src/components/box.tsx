@@ -1,6 +1,6 @@
 import React from 'react';
 import { useSelector ,useDispatch} from 'react-redux';
-import {TStoreType} from '../store/redux-store'
+import {TStoreType} from '../store/redux-reducer'
 
 export default function Box() {
   const selector=((state:TStoreType)=>state);

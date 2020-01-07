@@ -1,20 +1,19 @@
 import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { TStoreType, Tcustomer } from '../store/redux-store';
+import { TStoreType, Tcustomer } from '../store/redux-reducer';
+import getCC from '../store/use-redux-actions';
 
 const getCustomers = (data: TStoreType) => data.customers;
-const customers: Tcustomer[] = [
-  { firstName: 'bbFirst' },
-  { firstName: 'bbSecond' }
-];
 
 export default function Customers() {
   const allCustomers = useSelector(getCustomers);
-  const dispatch = useDispatch();
+
+  const actions = getCC();
 
   const handleCustomers = () => {
-    dispatch({ type: 'GET_CUSTOMERS',payload:customers });
+    actions.getC();
   };
+
   return (
     <div>
       Show all Customers
