@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import styled from 'styled-components';
 import { ReactComponent as ArrowCollapseRC } from '../assets/arrow-collapse-left.svg';
 import { ReactComponent as HumbergerRC } from '../assets/menu-hamburger.svg';
+import BasicMenu from '../components/basic-menu';
 
 /* 
 The MenuSection consists of three parts
@@ -22,7 +23,6 @@ const useGetScreenWidth = () => {
 
   return ws;
 };
-
 
 const MenuDiv = styled.div<{ isCollapsed: boolean }>`
   margin: 0;
@@ -107,18 +107,16 @@ export default function CentralPageWithMenu() {
   };
 
   return (
-      <MenuDiv isCollapsed={isCollapsed}>
-        <MenuTopDiv>
-          <XBtn onClick={handleClick}>
-            {isCollapsed ? <XHumburger /> : <XArrowCollapse />}
-          </XBtn>
-        </MenuTopDiv>
+    <MenuDiv isCollapsed={isCollapsed}>
+      <MenuTopDiv>
+        <XBtn onClick={handleClick}>
+          {isCollapsed ? <XHumburger /> : <XArrowCollapse />}
+        </XBtn>
+      </MenuTopDiv>
 
-        <MenuLowDiv>
-          <div>Visit the Hospi</div>
-          <div>Settings</div>
-        </MenuLowDiv>
-      </MenuDiv>
-
+      <MenuLowDiv>
+        <BasicMenu />
+      </MenuLowDiv>
+    </MenuDiv>
   );
 }

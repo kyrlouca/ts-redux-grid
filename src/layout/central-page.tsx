@@ -1,8 +1,8 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuPage from './menu-page';
-import Box from '../components/box';
-import Customers from '../components/customers';
+import ContentPage from './content-page';
 
 const OuterDiv = styled.div`
   /* border: black 3px solid; */
@@ -21,12 +21,13 @@ const RightDiv = styled.div`
 
 export default function CentralPage() {
   return (
-    <OuterDiv>
-      <MenuPage />
-      <RightDiv>
-        <Box />
-        <Customers />
-      </RightDiv>
-    </OuterDiv>
+    <BrowserRouter>
+      <OuterDiv>
+        <MenuPage />
+        <RightDiv>
+          <ContentPage />
+        </RightDiv>
+      </OuterDiv>
+    </BrowserRouter>
   );
 }
