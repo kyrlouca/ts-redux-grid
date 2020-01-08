@@ -23,10 +23,18 @@ const KMenuItem = styled(NavLink)`
 export default function BasicMenu() {
   return (
     <KMenu>
-      
-      <KMenuItem to="/" activeClassName="green" >Home3</KMenuItem>
-      <KMenuItem to="/greenBox" activeClassName="green" >green box</KMenuItem>
-      <KMenuItem to="/yellowBox" activeClassName="green" >yellow box</KMenuItem>
+      <KMenuItem exact to="/" activeClassName="green">
+        Home3
+      </KMenuItem>
+      <KMenuItem exact to="/customers" activeClassName="green">
+        Customers
+      </KMenuItem>
+      <KMenuItem exact to="/greenBox" activeClassName="green">
+        green box
+      </KMenuItem>
+      <KMenuItem exact to="/yellowBox" activeClassName="green">
+        yellow box
+      </KMenuItem>
     </KMenu>
   );
 }
