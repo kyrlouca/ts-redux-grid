@@ -1,16 +1,12 @@
 import React from 'react';
-import { useSelector ,useDispatch} from 'react-redux';
-import {TStoreType} from '../store/redux-reducer'
-
+import {useAllCustomers} from '../store/use-redux-selector'
+import useReduxActions from '../store/use-redux-actions'
 export default function Box() {
-  const selector=((state:TStoreType)=>state);
-
-  const obj = useSelector(selector);
-  
-  const dispatch= useDispatch();
-      
+  const obj = useAllCustomers();
+  const actions=useReduxActions();
+        
   const inc = () => {
-    dispatch({type:'INC',load:{step:1}})    
+    actions.incCounter();
   };
 
   return (

@@ -1,9 +1,13 @@
 import { useDispatch } from 'react-redux';
 import axios from 'axios';
-import { TStoreType, Tcustomer } from '../store/redux-reducer';
+// import { TStoreType, Tcustomer } from '../store/redux-reducer';
+//TODO types for axios fetch
 
 export default function useReduxActions() {
   const dispatch = useDispatch();
+  const inc = ()=>{
+    dispatch({ type: 'INC'});
+  }
   const getCust = async () => {
     try {
       const resp = await axios.get(
@@ -25,7 +29,9 @@ export default function useReduxActions() {
       console.log(error);
     }
   };
+  
   return {
-    getC: getCust
+    getCustomers: getCust,
+    incCounter:inc,
   };
 }
