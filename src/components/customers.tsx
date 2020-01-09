@@ -19,7 +19,7 @@ export default function Customers() {
       {allCustomers.map(item => (
         <li key={item.firstName}>{item.firstName}</li>
       ))}
-      <button onClick={handleCustomers}>Press Me</button>
+      <button onClick={handleCustomers}>Data from dynamoDb</button>
     </div>
   );
 }
