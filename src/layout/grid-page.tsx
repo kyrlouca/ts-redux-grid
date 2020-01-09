@@ -2,7 +2,6 @@ import React from 'react';
 import styled from 'styled-components';
 import CentralPage from './central-page';
 
-// import TopPage from './TopPage';
 
 const MainGrid = styled.div`
   display: grid;

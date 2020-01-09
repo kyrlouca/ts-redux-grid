@@ -2,7 +2,7 @@ import React from 'react';
 import { BrowserRouter } from 'react-router-dom';
 import styled from 'styled-components';
 import MenuPage from './menu-page';
-import ContentPage from './content-page';
+import SwitcherPage from '../components/switcher-page';
 
 const OuterDiv = styled.div`
   /* border: black 3px solid; */
@@ -25,7 +25,7 @@ export default function CentralPage() {
       <OuterDiv>
         <MenuPage />
         <RightDiv>
-          <ContentPage />
+          <SwitcherPage />
         </RightDiv>
       </OuterDiv>
     </BrowserRouter>
